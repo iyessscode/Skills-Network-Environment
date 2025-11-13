@@ -23,6 +23,9 @@ function endTest() {
 	// Disable user input
 	document.getElementById('userInput').readOnly = true;
 
+	// Total characters
+	var totalChars = testText.length;
+
 	// Calculate time elapsed and words per minute (WPM)
 	var timeElapsed = (endTime - startTime) / 1000; // in seconds
 	var userTypedText = document.getElementById('userInput').value;
@@ -42,6 +45,9 @@ function endTest() {
 	var outputDiv = document.getElementById('output');
 	outputDiv.innerHTML =
 		'<h2>Typing Test Results:</h2>' +
+		'<p>Total Characters: ' +
+		totalChars +
+		'</p>' +
 		'<p>Words Typed: ' +
 		typedWords +
 		'</p>' +
